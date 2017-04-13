@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+
+    "name": "Bias Highlighter",
+    "description": "Highlights inherently biased words (naively)",
+    "version": "0.1",
+    "icons": {"128":"icon.png"},
+    "content_scripts": [{
+        "matches": [ //Not international
+            "*://www.washingtonpost.com/*",
+            "*://www.foxnews.com/*",
+            "*://www.nytimes.com/*",
+            "*://www.cnn.com/*",
+            "*://www.bbc.com/*",
+            "*://www.theguardian.com/*",
+            "*://www.telegraph.co.uk/*",
+            "*://www.wikipedia.com/*"
+        ],
+        "js": [
+            "highlight.js"
+        ],
+        "run_at": "document_end"
+    }],
+    "permissions": [ //Probably excessive
+        "http://*/*",
+        "https://*/*"
+    ]
+}
