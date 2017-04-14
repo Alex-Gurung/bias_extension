@@ -2,19 +2,20 @@
     "manifest_version": 2,
 
     "name": "Bias Highlighter",
-    "description": "Highlights inherently biased words (naively)",
+    "description": "Highlights inherently biased words (naively); Press shift S to highlight and shift W to undo",
     "version": "0.1",
     "icons": {"128":"icon.png"},
     "content_scripts": [{
         "matches": [ //Not international
-            "*://www.washingtonpost.com/*",
-            "*://www.foxnews.com/*",
-            "*://www.nytimes.com/*",
-            "*://www.cnn.com/*",
-            "*://www.bbc.com/*",
-            "*://www.theguardian.com/*",
-            "*://www.telegraph.co.uk/*",
-            "*://www.wikipedia.com/*"
+            "*://*/*"
+            // "*://www.washingtonpost.com/*",
+            // "*://www.foxnews.com/*",
+            // "*://www.nytimes.com/*",
+            // "*://www.cnn.com/*",
+            // "*://www.bbc.com/*",
+            // "*://www.theguardian.com/*",
+            // "*://www.telegraph.co.uk/*",
+            // "*://www.wikipedia.com/*"
         ],
         "js": [
             "highlight.js"
